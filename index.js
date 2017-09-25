@@ -1,11 +1,9 @@
 var express = require('express');
 var moment = require('moment');
-
-var app = express();
 var WebSocketServer = require('ws').Server
 var wss = new WebSocketServer({ port: 9000 });
-
 var app = express();
+
 var server = app.listen(8000, function () {
   var host = server.address().address;
   var port = server.address().port;
